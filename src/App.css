@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+/* Stylization of the main content */
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url('./img/Background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+    width: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* End */
+
+
+/* Styling the index component */
+
+.index__flex {
+    display: flex;
+    column-gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.index__text {
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.index__block1 {
+    height: 20px;
 }
+
+.index__block2 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index__p {
+    font-size: 60px;
+    position: relative;
+}
+
+.span {
+    font-size: 30px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+
+.index__block3 {
+    font-size: 17px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.index {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    max-width: 300px;
+    padding: 0;
+    line-height: 0px;
+}
+
+
+/* End */
+
+
+/* Stylization of the main weather component */
+
+.weather {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.weather__text {
+    font-size: 20px;
+}
+
+.weather__flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: 160px 160px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.weather__style {
+    padding-left: 10px;
+}
+
+.weather__style>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.weather__block {
+    background-color: rgba(255, 255, 255, 0.066);
+    width: 160px;
+    height: 168px;
+    border-radius: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.weather__block:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: 0.3s;
+}
+
+.weather__p {
+    position: relative;
+}
+
+.weather__min {
+    position: absolute;
+    display: flex;
+    column-gap: 2px;
+    align-items: flex-start;
+    left: 40px;
+    top: 8px;
+    font-size: 15px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+
+/* End */
+
+
+/* Stylization of the description of the description component */
+
+.description__cont {
+    display: grid;
+    grid-template-columns: 135px 135px 135px;
+    justify-content: space-between;
+}
+
+.description {
+    margin-top: -140px;
+    max-width: 500px;
+}
+
+.description__block {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.description__text {
+    border-bottom: 1px solid #ffffff4d;
+    font-size: 24px;
+}
+
+.texts {
+    font-size: 18px;
+}
+
+.description__flex {
+    display: flex;
+    column-gap: 100px;
+}
+
+.description__blocks {
+    padding-top: 80px;
+    width: 250px;
+    font-size: 20px;
+    border-bottom: 1px solid #ffffff4d;
+}
+
+.description__flexs {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+}
+
+.description__flexs>p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.descriptions {
+    font-weight: 300;
+}
+
+
+/* End */
+
+
+/* Adaptation of the application */
+
+@media(max-width: 730px) {
+    .description__flex {
+        display: block;
+    }
+}
+
+@media(max-width: 1184px) {
+    .description {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 1999px) {
+    .description__flex {
+        padding-left: 15px;
+    }
+    .weather {
+        padding-left: 15px;
+    }
+}
+
+
+/* End */
