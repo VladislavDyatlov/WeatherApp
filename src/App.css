@@ -220,7 +220,7 @@ body {
     }
 }
 
-@media(max-width: 1999px) {
+@media(max-width: 1199px) {
     .description__flex {
         padding-left: 15px;
     }
