@@ -13,13 +13,10 @@ function App() {
 
   return (
     <>
-      {spinner ? (
-        <Loader />
-      ) : (
-        <div className="main">
-          <Index />
-        </div>
-      )}
+      {spinner && <Loader />}
+      <div className="main">
+        <Index />
+      </div>
     </>
   );
 }

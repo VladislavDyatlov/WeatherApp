@@ -24,7 +24,7 @@ export const Main = () => {
               width={80}
               height={80}
             />
-            <p className="index__p">{Math.ceil(weathers.current?.temp) || "0"}<span className="span">o</span></p>  
+            <p className="index__p">{Math.ceil(weathers.current?.temp)}<span className="span">o</span></p>  
           </div>
           <div className="index__block3">{current}</div>
     </div>
