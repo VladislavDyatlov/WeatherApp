@@ -26,40 +26,36 @@ export const Description = () =>{
               <div className="description__block">
                 <p>По ощущениям</p>
                 <p className="texts">
-                  {Math.ceil(
-                    details.feels_like?.day
-                      ? details.feels_like?.day
-                      : weathers.current?.feels_like
-                  )}
+                  {
+                    Math.ceil(
+                      details.feels_like?.day
+                        ? details.feels_like?.day
+                        : weathers.current?.feels_like
+                    )
+                    /** такой вывод сделан для того чтобы пока пользователь не определился на какую дату
+                     *  он хочет посмотреть подробную информацию о погоде сначала выводилась
+                     *  информация он текущем дне */
+                  }
                   &#176;
                 </p>
               </div>
               <div className="description__block">
                 <p>Влажность</p>
                 <p className="texts">
-                  {details.humidity
-                    ? details.humidity
-                    : weathers.current?.humidity}
-                  %
+                  {details.humidity || weathers.current?.humidity}%
                 </p>
               </div>
               <div className="description__block">
                 <p>Видимость</p>
                 <p className="texts">
-                  {Math.ceil(
-                    details.wind_gust
-                      ? details.wind_gust
-                      : weathers.current?.wind_gust
-                  )}{" "}
+                  {Math.ceil(details.wind_gust || weathers.current?.wind_gust)}{" "}
                   км
                 </p>
               </div>
               <div className="description__block">
                 <p>Давление</p>
                 <p className="texts">
-                  {details.pressure
-                    ? details.pressure
-                    : weathers.current?.pressure}
+                  {details.pressure || weathers.current?.pressure}
                   ,00 мм
                 </p>
               </div>
@@ -67,9 +63,7 @@ export const Description = () =>{
                 <p>Ветер</p>
                 <p className="texts">
                   {Math.ceil(
-                    details.wind_speed
-                      ? details.wind_speed
-                      : weathers.current?.wind_speed
+                    details.wind_speed || weathers.current?.wind_speed
                   )}{" "}
                   м/с
                 </p>
@@ -82,22 +76,14 @@ export const Description = () =>{
               <p>Восход</p>
               <div className="description__flexs">
                 <img src={logo} width="35" height="35" />
-                <p>
-                  {onTimes(
-                    details.sunrise ? details.sunrise : weathers.current?.sunrise
-                  )}
-                </p>
+                <p>{onTimes(details.sunrise || weathers.current?.sunrise)}</p>
               </div>
             </div>
             <div>
               <p>Закат</p>
               <div className="description__flexs">
                 <img src={logos} width="35" height="35" />
-                <p>
-                  {onTimes(
-                    details.sunset ? details.sunset : weathers.current?.sunset
-                  )}
-                </p>
+                <p>{onTimes(details.sunset || weathers.current?.sunset)}</p>
               </div>
             </div>
           </div>

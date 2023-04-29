@@ -1,12 +1,25 @@
-import './App.css';
+import { useEffect, useState } from 'react';
 import { Index } from './component';
+import './App.css';
+import { Loader } from './Loader/Loader';
 
 function App() {
+
+  const [ spinner, setSpinner ] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setSpinner(false), 2500)
+  }, []);
+
   return (
     <>
-      <div className="main">
-        <Index />
-      </div>
+      {spinner ? (
+        <Loader />
+      ) : (
+        <div className="main">
+          <Index />
+        </div>
+      )}
     </>
   );
 }

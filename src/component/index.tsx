@@ -6,7 +6,7 @@ export const Index = () => {
 
   return (
     <div>
-      <Main />
+      <Main /> 
       <Weather />
       <Description />
     </div>
