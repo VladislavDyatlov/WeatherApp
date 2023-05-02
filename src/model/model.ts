@@ -21,20 +21,14 @@ interface WeatherArray{
 
 export interface WeatherList{
     dt: number;
-    feels_like: {
-        day: number;
-        night: number;
-    };
+    feels_like: Temp;
     pressure: number;
     wind_speed: number;
     sunrise: number;
     sunset: number;
     humidity: number;
     wind_gust: number;
-    temp: {
-        day: number;
-        night: number;
-    };
+    temp: Temp;
     weather: Weather[];
 }
 
@@ -43,4 +37,9 @@ interface Weather{
     main: string;
     description: string;
     icon: string;
+}
+
+interface Temp{
+    day: number;
+    night: number;
 }
